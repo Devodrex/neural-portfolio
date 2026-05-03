@@ -53,7 +53,7 @@ export default function Nav() {
         <div className="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
           <a href="#hero" className="font-display font-black text-xl no-underline">
             <span style={{ color: '#00f3ff', textShadow: '0 0 20px rgba(0,243,255,0.6)' }}>AKS</span>
-            <span style={{ color: '#fff' }}>//NEURAL</span>
+            <span style={{ color: '#fff' }}>{'//NEURAL'}</span>
           </a>
 
           {/* Desktop links */}
