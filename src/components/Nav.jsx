@@ -63,7 +63,7 @@ export default function Nav() {
                 <a href={l.href}
                   className="font-mono text-xs no-underline transition-all duration-200"
                   style={{ color: active === l.href.slice(1) ? '#00f3ff' : '#64748b' }}>
-                  {active === l.href.slice(1) && <span style={{ color: '#bc13fe' }}>{'>'} </span>}
+                  {active === l.href.slice(1) && <span style={{ color: '#bc13fe' }}>{'> '}</span>}
                   {l.label}
                 </a>
               </li>

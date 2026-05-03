@@ -119,7 +119,7 @@ function DossierCard({ project, index }) {
           </div>
           <div>
             <div className="font-mono text-xs mb-1" style={{ color: project.color }}>
-              {project.code} // STATUS: <span style={{ color: project.accent }}>{project.status}</span>
+              {project.code}{' // STATUS: '}<span style={{ color: project.accent }}>{project.status}</span>
             </div>
             <h3 className="font-display font-bold text-lg text-white leading-tight">{project.title}</h3>
             <p className="font-mono text-xs mt-0.5" style={{ color: '#64748b' }}>{project.subtitle}</p>

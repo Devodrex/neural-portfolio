@@ -31,7 +31,6 @@ export default function Hero() {
 
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start start', 'end start'] });
   const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1.5]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.8, 0]);
 
   // Typing animation
   useEffect(() => {
@@ -47,6 +46,7 @@ export default function Hero() {
       }
     }, 80);
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roleIdx]);
 
   // Rotating stats

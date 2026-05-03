@@ -36,7 +36,7 @@ export default function Contact() {
         >
           <div className="scan-line" style={{ background: 'linear-gradient(90deg,transparent,rgba(74,222,128,0.2),transparent)' }} />
 
-          <div className="font-mono text-xs mb-5" style={{ color: '#4ade80' }}>// CONTACT_PROTOCOLS</div>
+          <div className="font-mono text-xs mb-5" style={{ color: '#4ade80' }}>{'// CONTACT_PROTOCOLS'}</div>
 
           {[
             { icon: 'fas fa-map-marker-alt', label: 'LOCATION', value: 'Jamshedpur, India', color: '#00f3ff' },
@@ -87,7 +87,7 @@ export default function Contact() {
           style={{ borderColor: 'rgba(0,243,255,0.2)', background: 'linear-gradient(135deg,rgba(0,243,255,0.02),rgba(188,19,254,0.02))' }}
         >
           <div>
-            <div className="font-mono text-xs mb-5" style={{ color: '#00f3ff' }}>// SYSTEM_STATUS</div>
+            <div className="font-mono text-xs mb-5" style={{ color: '#00f3ff' }}>{'// SYSTEM_STATUS'}</div>
             {[
               { label: 'AVAILABILITY',     value: 'OPEN TO OPPORTUNITIES', color: '#4ade80' },
               { label: 'CURRENT_ROLE',     value: 'Student + Intern',       color: '#00f3ff' },

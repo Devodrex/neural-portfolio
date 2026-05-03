@@ -3,16 +3,18 @@ import React, { useEffect, useRef } from 'react';
 export default function CustomCursor() {
   const dotRef = useRef(null);
   const ringRef = useRef(null);
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
+  const ringX = useRef(0);
+  const ringY = useRef(0);
 
   useEffect(() => {
     const move = e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+      mouseX.current = e.clientX;
+      mouseY.current = e.clientY;
       if (dotRef.current) {
-        dotRef.current.style.left = (mouseX - 4) + 'px';
-        dotRef.current.style.top  = (mouseY - 4) + 'px';
+        dotRef.current.style.left = (mouseX.current - 4) + 'px';
+        dotRef.current.style.top  = (mouseY.current - 4) + 'px';
       }
     };
 
@@ -29,11 +31,11 @@ export default function CustomCursor() {
 
     let raf;
     const animate = () => {
-      ringX += (mouseX - ringX) * 0.13;
-      ringY += (mouseY - ringY) * 0.13;
+      ringX.current += (mouseX.current - ringX.current) * 0.13;
+      ringY.current += (mouseY.current - ringY.current) * 0.13;
       if (ringRef.current) {
-        ringRef.current.style.left = (ringX - 16) + 'px';
-        ringRef.current.style.top  = (ringY - 16) + 'px';
+        ringRef.current.style.left = (ringX.current - 16) + 'px';
+        ringRef.current.style.top  = (ringY.current - 16) + 'px';
       }
       raf = requestAnimationFrame(animate);
     };
